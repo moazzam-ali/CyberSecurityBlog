@@ -1,0 +1,302 @@
+/* Genearl Styling Resets */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Manrope", sans-serif;
+}
+
+/* Navigation Bar Styles */
+
+.navbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    padding: 1.5rem;
+    background-color: white;
+}
+
+.nav-item {
+    text-decoration: none;
+    font-size: 1.2rem;
+    color: #33354d;
+    font-weight: 600;
+}
+
+.navbar .active {
+    color: #a020f0;
+}
+
+/* General Styles */
+.bold {
+    font-weight: 600;
+}
+
+.italic {
+    font-style: italic;
+}
+
+.highlight {
+    color: #a020f0;
+}
+
+.padding{
+    padding: 2rem 20rem 5rem;
+}
+
+/* Typography */
+.base-text {
+    font-size: 1.1rem;
+}
+
+.heading-primary {
+    font-size: 1.6rem;
+}
+
+/* Page Preloader Animation */
+.loader{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    width: 100%;
+    background: white; 
+    position: fixed;
+    transition: all .5s;
+    /* display: none; */
+}
+
+#loader {
+    position: fixed;
+    margin: auto;
+    left: 0;
+    right: 0;
+    top: 50%;
+    width: 90px;
+  }
+  #loader ul {
+    margin: 0;
+    list-style: none;
+    width: 90px;
+    position: relative;
+    padding: 0;
+    height: 10px;
+  }
+  #loader ul li {
+    position: absolute;
+    width: 2px;
+    height: 0;
+    background-color: #000;
+    bottom: 0;
+  }
+  @keyframes sequence1 {
+    0% {
+      height: 10px;
+    }
+    50% {
+      height: 50px;
+    }
+    100% {
+      height: 10px;
+    }
+  }
+  @keyframes sequence2 {
+    0% {
+      height: 20px;
+    }
+    50% {
+      height: 65px;
+    }
+    100% {
+      height: 20px;
+    }
+  }
+  #loader li:nth-child(1) {
+    left: 0;
+    animation: sequence1 1s ease infinite 0;
+  }
+  #loader li:nth-child(2) {
+    left: 15px;
+    animation: sequence2 1s ease infinite 0.1s;
+  }
+  #loader li:nth-child(3) {
+    left: 30px;
+    animation: sequence1 1s ease-in-out infinite 0.2s;
+  }
+  #loader li:nth-child(4) {
+    left: 45px;
+    animation: sequence2 1s ease-in infinite 0.3s;
+  }
+  #loader li:nth-child(5) {
+    left: 60px;
+    animation: sequence1 1s ease-in-out infinite 0.4s;
+  }
+  #loader li:nth-child(6) {
+    left: 75px;
+    animation: sequence2 1s ease infinite 0.5s;
+  }
+  
+
+/* Homepage Styles */
+.home-main {
+    background: linear-gradient(
+        90deg,
+        rgb(137, 207, 240, 0.1) 0%,
+        rgb(160, 32, 240, 0.1) 64.58%,
+        rgb(160, 32, 240, 0.1) 100%
+    );
+}
+
+.header-image-container{
+    text-align: center;
+    background-color: white;
+    border-radius: .3rem;
+    margin: 3rem 0;
+}
+
+.header-image{
+    width: 60%;
+}
+
+.title {
+    font-size: 2.2rem;
+    padding-bottom: 1rem;
+}
+
+.home-main .heading-primary {
+    padding: 2rem 0 0.6rem;
+}
+
+.quote {
+    letter-spacing: 1px;
+}
+
+.threats-list {
+    padding: 0 2rem 2rem;
+}
+
+.threats-list-item{
+    padding: .4rem 0;
+}
+
+#cyberthreat-stats{
+    display: flex;
+    flex-direction: column;
+
+}
+
+#cyberthreat-stats table, th, td{
+    border: 1px solid #a020f0;
+    padding: .5rem;
+}
+
+#cyberthreat-stats table{
+    border-collapse: collapse;
+}
+
+
+
+/* Types Page Styles */
+
+.types-main{
+    background: linear-gradient(
+        90deg,
+        rgb(137, 207, 240, 0.1) 0%,
+        rgb(160, 32, 240, 0.1) 64.58%,
+        rgb(160, 32, 240, 0.1) 100%
+    );
+}
+
+.types-container{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.type{
+    display: flex;
+    flex-direction: column;
+    gap: .4rem;
+}
+
+
+/* Footer Styles */
+.footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 2rem;
+}
+
+.socials{
+    display: flex;
+    gap: 2rem;
+    padding: 2.5rem;
+}
+
+.social-icon{
+    width: 2rem;
+    transition: all .2s;
+    cursor: pointer;
+}
+
+.social-icon:hover{
+    transform: translateY(-2px);
+}
+
+.copyrights-text{
+    text-align: center;
+}
+
+
+/* Media Queries for Responsive Website */
+
+
+@media (max-width: 1200px) {
+    .padding{
+        padding: 2rem 15rem 4rem;
+    }
+}
+
+/* Medium Devices */
+@media (max-width: 991.98px) { 
+    .padding{
+        padding: 2rem 10rem 3rem;
+    }
+}
+
+
+/* Small devices */
+@media (max-width: 767.98px) { 
+    .padding{
+        padding: 2rem 2rem 2rem;
+    }
+
+    .title{
+        font-size: 1.6rem;
+    }
+
+    .heading-primary{
+        font-size: 1.2rem;
+    }
+
+    .base-text{
+        font-size: .9rem;
+    }
+
+    .nav-item{
+        font-size: 1rem;
+    }
+
+    .footer .socials{
+        padding: 1.5rem; 
+    }
+
+    .coprights-text{
+        font-size: .7rem;
+    }
+ }
